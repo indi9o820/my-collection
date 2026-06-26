@@ -1,0 +1,264 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wrap {
+  max-width: 600px;
+  width: 100%;
+  padding-bottom: 90px;
+  margin: 40px auto 0;
+}
+
+.mainBtn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 10px;
+  max-width: 600px;
+  width: 90%;
+}
+.mainBtn > button[class*=Btn] {
+  flex: 1;
+  font-size: 1.2em;
+  width: 33.3333333333%;
+}
+
+.setArea {
+  padding: 15px;
+  background: #333;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 0.8em;
+}
+.setArea .headTxt {
+  margin: 0 0 10px 0;
+}
+.setArea .inner {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.setArea .inner .exportBtn {
+  background-color: #4caf50;
+}
+.setArea .inner .importBtn {
+  background-color: #f44336;
+}
+
+.searchArea {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.searchArea .searchTxt {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.addForm {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.addForm .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.addForm .titleTxt {
+  padding: 8px;
+}
+.addForm .catTxt {
+  padding: 8px;
+}
+.addForm .comTxt {
+  padding: 8px;
+}
+.addForm .memoTxt {
+  padding: 8px;
+  min-height: 60px;
+}
+.addForm .btnArea {
+  display: flex;
+  gap: 10px;
+}
+.addForm .btnArea * {
+  text-align: center;
+}
+.addForm .btnArea .subBtn {
+  width: 70%;
+}
+.addForm .btnArea .resetBtn {
+  display: flex;
+  width: 30%;
+}
+
+.catBtnArea {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.catBtnArea .catBtn {
+  padding: 5px 10px;
+  font-size: 0.8em;
+}
+
+.collectionList {
+  margin-top: 20px;
+}
+.collectionList .sort-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.collectionList .sort-container .sort-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  padding: 8px 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+.collectionList .sort-container .sort-toggle-btn:hover {
+  background-color: #f0f0f0;
+}
+.collectionList .sort-container .sort-toggle-btn svg {
+  color: #666;
+  transform: translateY(calc(var(--sort-direction, 0) * 1px));
+}
+.collectionList .collectItem {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: left;
+  background-color: #fff;
+}
+.collectionList .collectItem:nth-of-type(1) {
+  margin-top: 30px;
+}
+.collectionList .collectItem .itemCard {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .collectionList .collectItem .itemCard {
+    flex-direction: column;
+  }
+}
+.collectionList .collectItem .itemData .item-memo {
+  white-space: pre-wrap;
+}
+.collectionList .collectItem .itemAct {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+@media screen and (max-width: 768px) {
+  .collectionList .collectItem .itemAct {
+    margin-top: 10px;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+.collectionList .collectItem .itemAct > button[class*=Btn] {
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.8em;
+  text-align: center;
+}
+.collectionList .collectItem .itemAct > button[class*=Btn]:visited {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .collectionList .collectItem .itemAct > button[class*=Btn] {
+    margin: 0 0 0 10px;
+    width: 33.3333333333%;
+  }
+}
+.collectionList .collectItem .itemAct .editBtn {
+  background-color: #ffca28;
+}
+.collectionList .collectItem .itemAct .deleteBtn {
+  background-color: #ff4d4d;
+}
+.collectionList .collectItem .itemAct .searchLinkBtn {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #4CAF50;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s;
+  text-align: center;
+}
+.collectionList .collectItem .itemAct .searchLinkBtn:hover {
+  background-color: #45a049;
+}
+.collectionList .collectItem .itemAct .searchLinkBtn:link {
+  color: #fff;
+}
+.collectionList .collectItem .itemAct .searchLinkBtn:visited {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .collectionList .collectItem .itemAct .searchLinkBtn {
+    width: 33.3333333333%;
+  }
+}
+.collectionList .collectItem .head {
+  margin: 0 0 5px 0;
+  color: #333;
+}
+.collectionList .collectItem .tagArea {
+  font-size: 0.9em;
+  color: #666;
+}
+.collectionList .collectItem .memoArea {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  font-size: 0.85em;
+  border-left: 4px solid #646cff;
+}
+
+.footerNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #222;
+  align-items: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+.footerNav .setBtn {
+  height: 50px;
+  font-size: 0.9rem;
+}
